@@ -1,0 +1,5 @@
+Kirchoff: Boost Regulator Board
+===============================
+
+I designed [a different project](https://github.com/coddingtonbear/maxwell) around using a [boost regulator board I bought off of Amazon](https://www.amazon.com/eBoot-Converter-Voltage-Adjustable-Step-up/dp/B06XWSV89D/ref=sr_1_2?ie=UTF8&qid=1513387663&sr=8-2&keywords=XL6009) using an [XL6009 switching regulator IC](https://lib.chipdip.ru/164/DOC001164799.pdf).  Unfortunately, the capabilities of the boost regulator module are overstated on the product page, and the module has undesirable (read: generates voltages of 10-20V when set to output ~5V) when input voltage drops below 3.5V.  This is unfortunate for me given that my voltage source is a single-cell Li-Ion battery, and thus will be floating right around the danger zone of the aforementioned chip.   The board design in this repository is a pin-compatible version you can build on your own using a chip having much better low-voltage behavior -- an [LT1308](http://cds.linear.com/docs/en/datasheet/1308abfb.pdf).
+
